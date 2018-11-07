@@ -21,6 +21,7 @@ function preload(){
      img2 = loadImage("Player Kopie 2.png");
     
    
+    
 }
  
 function setup() {
