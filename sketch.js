@@ -38,24 +38,24 @@ rSlider = createSlider(0, 255, 0);
    //noLoop();
     
     frameRate(5);
-     firebase.database().ref('WorldHardestGameip-172-31-32-11/').once('value', function(snapshot){
-  snapshot.forEach(function(data){
+  //   firebase.database().ref('WorldHardestGameip-172-31-32-11/').once('value', function(snapshot){
+//  snapshot.forEach(function(data){
  //      firebase.database().ref('WorldHardestGameip-172-31-35-82/').once('value', function(snapshot){
  // snapshot.forEach(function(data){
       
-      dataWHG_3.x.push(data.val().Death_Position_X);
-      dataWHG_3.y.push(data.val().Death_Position_Y);
+//      dataWHG_3.x.push(data.val().Death_Position_X);
+//      dataWHG_3.y.push(data.val().Death_Position_Y);
   //  console.log(data.val().Death_Position_X);
    //   console.log(data.val().Death_Position_Y);
    //   console.log(data.val().TimeStamp);
       
-  });
+//  });
          //  console.log("LENGTH: " + dataWHG.x.length);
    
   
    // console.log(JSON.stringify(dataWHG))
  // console.log(dataWHG);
-})
+//})
     
  //        firebase.database().ref('WorldHardestGameip-172-31-32-11/').once('value', function(snapshot){
  // snapshot.forEach(function(data){
@@ -96,7 +96,7 @@ function draw() {
            image(img, dataWHG_100.x[i], dataWHG_100.y[i], img.width/100, img.height/100);  
    }
     
-       for(let i=int(map(b2, 0, 255 , 0, dataWHG_3.x.length-1)); i > int(map(r2, 0, 255 , 0, dataWHG_3.x.length-1)); i-=50)
+       for(let i=int(map(b2, 0, 255 , 0, dataWHG_3.x.length-1)); i > int(map(r2, 0, 255 , 0, dataWHG_3.x.length-1)); i--)
      {
       //   console.log("DATA:" + dataWHG.x[i]);
            image(img2, dataWHG_3.x[i], dataWHG_3.y[i], img2.width/100, img2.height/100);  
