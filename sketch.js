@@ -37,6 +37,9 @@ rSlider = createSlider(0, 255, 0);
   background(bg);
    //noLoop();
     
+    
+    
+    
     frameRate(5);
       firebase.database().ref('WorldHardestGameip-172-31-32-11/').once('value', function(snapshot){
   snapshot.forEach(function(data){
@@ -58,25 +61,25 @@ rSlider = createSlider(0, 255, 0);
   //console.log(dataWHG_3);
   
 
-//    
-// //        firebase.database().ref('WorldHardestGameip-172-31-32-11/').once('value', function(snapshot){
-// // snapshot.forEach(function(data){
-//      firebase.database().ref('WorldHardestGameip-172-31-35-82/').once('value', function(snapshot){
-//  snapshot.forEach(function(data){
-//      
-//      dataWHG_100.x.push(data.val().Death_Position_X);
-//      dataWHG_100.y.push(data.val().Death_Position_Y);
-//  //  console.log(data.val().Death_Position_X);
-//   //   console.log(data.val().Death_Position_Y);
-//   //   console.log(data.val().TimeStamp);
-//      
-//  });
-//         //  console.log("LENGTH: " + dataWHG.x.length);
-//   
-//  
-//   // console.log(JSON.stringify(dataWHG))
-// // console.log(dataWHG);
-//})
+    
+ //        firebase.database().ref('WorldHardestGameip-172-31-32-11/').once('value', function(snapshot){
+ // snapshot.forEach(function(data){
+      firebase.database().ref('WorldHardestGameip-172-31-35-82/').once('value', function(snapshot){
+  snapshot.forEach(function(data){
+      
+      dataWHG_100.x.push(data.val().X);
+      dataWHG_100.y.push(data.val().Y);
+  //  console.log(data.val().Death_Position_X);
+   //   console.log(data.val().Death_Position_Y);
+   //   console.log(data.val().TimeStamp);
+      
+  });
+         //  console.log("LENGTH: " + dataWHG.x.length);
+   
+  
+   // console.log(JSON.stringify(dataWHG))
+ // console.log(dataWHG);
+})
    
 
 }
@@ -92,11 +95,11 @@ function draw() {
  //   console.log(r);
 //console.log(int(map(r, 0, 255 , 0, dataWHG.x.length-1)));
    //    console.log(dataWHG.x.length);
-//     for(let i=int(map(b, 0, 255 , 0, dataWHG_100.x.length-1)); i > int(map(r, 0, 255 , 0, dataWHG_100.x.length-1)); i--)
-//     {
-//      //   console.log("DATA:" + dataWHG.x[i]);
-//           image(img, dataWHG_100.x[i], dataWHG_100.y[i], img.width/100, img.height/100);  
-//   }
+     for(let i=int(map(b, 0, 255 , 0, dataWHG_100.x.length-1)); i > int(map(r, 0, 255 , 0, dataWHG_100.x.length-1)); i--)
+     {
+      //   console.log("DATA:" + dataWHG.x[i]);
+           image(img, dataWHG_100.x[i], dataWHG_100.y[i], img.width/100, img.height/100);  
+   }
     
        for(let i=int(map(b2, 0, 255 , 0, dataWHG_3.x.length-1)); i > int(map(r2, 0, 255 , 0, dataWHG_3.x.length-1)); i--)
      {
