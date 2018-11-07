@@ -37,7 +37,7 @@ rSlider = createSlider(0, 255, 0);
   background(bg);
    //noLoop();
     
-    frameRate(15);
+    frameRate(5);
      firebase.database().ref('WorldHardestGameip-172-31-32-11/').once('value', function(snapshot){
   snapshot.forEach(function(data){
  //      firebase.database().ref('WorldHardestGameip-172-31-35-82/').once('value', function(snapshot){
