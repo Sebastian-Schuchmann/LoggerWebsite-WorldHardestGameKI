@@ -1,11 +1,10 @@
 
 var config = {
-    apiKey: "AIzaSyABWZVNXSKq7iv5sx2LTAp85xxfA_t1BAA",
-    authDomain: "basketball-tf.firebaseapp.com",
-    databaseURL: "https://basketball-tf.firebaseio.com",
-    storageBucket: "basketball-tf.appspot.com",
+     apiKey: "AIzaSyAOwjiiquNsKE4IjOtJZJBhzCXBCD-TnsY",
+    authDomain: "whg-ai.firebaseapp.com",
+    databaseURL: "https://whg-ai.firebaseio.com",
+    storageBucket: "whg-ai.appspot.com"
 };
-
 
 firebase.initializeApp(config);
 var bg;
@@ -59,7 +58,7 @@ rSlider = createSlider(0, 255, 0);
     
  //        firebase.database().ref('WorldHardestGameip-172-31-32-11/').once('value', function(snapshot){
  // snapshot.forEach(function(data){
-      firebase.database().ref('WorldHardestGameip-172-31-35-82/').once('value', function(snapshot){
+      firebase.database().ref('WorldHardestGameip-172-31-32-11/').once('value', function(snapshot){
   snapshot.forEach(function(data){
       
       dataWHG_100.x.push(data.val().Death_Position_X);
