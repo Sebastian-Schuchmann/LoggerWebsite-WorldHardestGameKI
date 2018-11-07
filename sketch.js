@@ -96,7 +96,7 @@ function draw() {
            image(img, dataWHG_100.x[i], dataWHG_100.y[i], img.width/100, img.height/100);  
    }
     
-       for(let i=int(map(b2, 0, 255 , 0, dataWHG_3.x.length-1)); i > int(map(r2, 0, 255 , 0, dataWHG_3.x.length-1)); i--)
+       for(let i=int(map(b2, 0, 255 , 0, dataWHG_3.x.length-1)); i > int(map(r2, 0, 255 , 0, dataWHG_3.x.length-1)); i-=50)
      {
       //   console.log("DATA:" + dataWHG.x[i]);
            image(img2, dataWHG_3.x[i], dataWHG_3.y[i], img2.width/100, img2.height/100);  
